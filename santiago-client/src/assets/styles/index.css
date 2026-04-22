@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Inter", ui-sans-serif, sans-serif;
+  --color-nu-blue: #001E44;
+  --color-nu-blue-soft: #0a2b5c;
+  --color-nu-gold: #FFB81C;
+  --color-nu-gold-soft: #facc15;
+}
+
+@layer base {
+  html {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-zinc-100 text-zinc-900 antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Bebas Neue", "Inter", ui-sans-serif, sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
